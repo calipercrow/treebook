@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :statuses
+
+  root to: 'statuses#index' # Step 2 of Devise installation, setting root to something, in this case the status page.
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
